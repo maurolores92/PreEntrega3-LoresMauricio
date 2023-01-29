@@ -19,6 +19,8 @@
             </ul>
         </div>
         <div class="nav-menu">
+            <input type="text" id="buscar" class="buscar " placeholder="Buscar">  
+            <button class="boton-buscar">Buscar</button>
             <a href="https://www.instagram.com/maurolores92/"><i class="bi bi-instagram"></a></i>
             <a href="https://www.linkedin.com/in/mauriciolores/"><i class="bi bi-linkedin"></a></i>
             <a href="https://github.com/maurolores92"><i class="bi bi-github"></a></i>
@@ -40,7 +42,11 @@
                     <li><button id="auriculares" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i>Auriculares</button></li>
                     <li><button id="microfonos" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i>Microfonos</button></li>
                     <li><button id="joystick" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i>Joystick</button></li>
-                    <li><a href="./carrito.html"><button class="boton-menu boton-categoria boton-carrito"><i class="bi bi-cart-fill"></i>Carrito <span class="numerito">0</span></button></a></li>
+                    <li>
+                        <a class="boton-menu boton-carrito" href="./carrito.html">
+                            <i class="bi bi-cart-fill"></i> Carrito <span id="numerito" class="numerito">0</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
             <div class="texto-footer">2023 Mauricio Lores</div>
@@ -55,5 +61,6 @@
         </main>
     </div>
 <script src="./js/main.js"></script>
+<script src="./js/carrito.js"></script>
 </body>
 </html>

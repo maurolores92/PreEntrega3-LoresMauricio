@@ -51,7 +51,6 @@ nav {
     display: grid;
     grid-template-columns: 1fr 4fr;
     background-color: var(--clr-main);
-    padding-top: 2rem;
 }
 
 aside {
@@ -64,13 +63,11 @@ aside {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
 }
 
 .logo {
     font-weight: 400;
     font-size: 1.3rem;
-    margin-left: 30px;
 }
 
 .menu {
@@ -89,14 +86,13 @@ aside {
     gap: 1rem;
     font-weight: 600;
     padding: 1rem;
-    font-size: .95rem;
+    font-size: .85rem;
     width: 100%;
 }
 
 .boton-menu.active {
     background-color: var(--clr-white);
     color: var(--clr-main);
-    width: 100%;
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
     position: relative;
@@ -109,6 +105,7 @@ aside {
     height: 2rem;
     bottom: 100%;
     right: 0;
+    background-color: transparent;
     border-bottom-right-radius: .5rem;
     box-shadow: 0 1rem 0 var(--clr-white);
 }
@@ -120,14 +117,16 @@ aside {
     height: 2rem;
     top: 100%;
     right: 0;
+    background-color: transparent;
     border-top-right-radius: .5rem;
-    box-shadow: 0 - 1rem 0 var(--clr-white);
+    box-shadow: 0 -1rem 0 var(--clr-white);
 }
 
 .boton-menu > i.bi-hand-index-thumb-fill,
 .boton-menu > i.bi-hand-index-thumb {
     transform: rotateZ(90deg);
 }
+
 .boton-carrito {
     margin-top: 2rem;
 }
@@ -150,7 +149,7 @@ aside {
 }
 
 main {
-    background-color: var(--clr-white) ;
+    background-color: var(--clr-white);
     margin: 1rem;
     margin-left: 0;
     border-radius: 2rem;
@@ -160,7 +159,6 @@ main {
 .titulo-principal {
     color: var(--clr-main);
     margin-bottom: 2rem;
-    border-radius: 1rem;
 }
 
 .contenedor-productos {
@@ -171,7 +169,6 @@ main {
 
 .producto-imagen {
     max-width: 100%;
-
     border-radius: 1rem;
 }
 
@@ -184,10 +181,10 @@ main {
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: .25rem
+    gap: .25rem;
 }
 
-.producto-titulo{
+.producto-titulo {
     font-size: 1rem;
 }
 
@@ -195,11 +192,12 @@ main {
     border: 0;
     background-color: var(--clr-white);
     color: var(--clr-main);
-    padding: .25rem;
+    padding: .4rem;
     text-transform: uppercase;
-    border-radius: 1rem;
-    border: solid 2px var(--clr-white);
-    transition: background-color .2s, color .2sg;
+    border-radius: 2rem;
+    cursor: pointer;
+    border: 2px solid var(--clr-white);
+    transition: background-color .2s, color .2s;
 }
 
 .producto-agregar:hover {
@@ -298,6 +296,31 @@ main {
 }
 
 /* MI CUENTA */
+
+.buscar {
+    padding: .3rem;
+    margin-top: -0.3rem;
+}
+.boton-buscar {
+    border: 0;
+    background-color: var(--clr-main);
+    color: var(--clr-white);
+    padding: .3rem;
+    margin-top: -0.3rem;
+    margin-left: -1rem;
+    text-transform: uppercase;
+    border-radius: .4rem;
+    border: solid 2px var(--clr-main);
+    transition: background-color .2s, color .2sg;
+}
+
+.boton-buscar:hover {
+    background-color: var(--clr-white);
+    color: var(--clr-main);
+}
+
+
+
 
 .main-micuenta {
     display: flex;

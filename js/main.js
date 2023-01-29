@@ -14,7 +14,7 @@ const productos = [
     },
     {
         id: "monitor-02",
-        titulo: "Monitor Gamer 24 Level Up Full Hd 144hz 1ms 24-up5500 Mexx",
+        titulo: "Monitor Gamer 24 Level Up Full Hd 144hz 1ms 24-up5500",
         imagen: "./img/monitor02.jpg",
         categoria: {
             nombre: "Monitores",
@@ -24,7 +24,7 @@ const productos = [
     },
     {
         id: "monitor-03",
-        titulo: "Monitor gamer curvo Samsung C24RG5 LCD 23.5 negro 73500",
+        titulo: "Monitor gamer curvo Samsung C24RG5 LCD 23.5 negro",
         imagen: "./img/monitor03.jpg",
         categoria: {
             nombre: "Monitores",
@@ -45,7 +45,7 @@ const productos = [
     // TECLADOS
     {
         id: "teclado-01",
-        titulo: "Teclado gamer Nisuta NSKBGZ61 QWERTY Outemu Brown color negro",
+        titulo: "Teclado gamer Nisuta NSKBGZ61 QWERTY Outemu Brown",
         imagen: "./img/teclado01.jpg",
         categoria: {
             nombre: "Teclados",
@@ -55,7 +55,7 @@ const productos = [
     },
     {
         id: "teclado-02",
-        titulo: "Teclado gamer Redragon Dark Avenger K568RGB QWERTY Outemu MK2 Red",
+        titulo: "Teclado gamer Redragon Dark Avenger K568RGB QWERTY Red",
         imagen: "./img/teclado02.jpg",
         categoria: {
             nombre: "Teclados",
@@ -65,7 +65,7 @@ const productos = [
     },
     {
         id: "teclado-03",
-        titulo: "Teclado gamer HyperX Alloy Origins Core QWERTY Red inglés US color negro",
+        titulo: "Teclado gamer HyperX Alloy Origins Core QWERTY Red inglés",
         imagen: "./img/teclado03.jpg",
         categoria: {
             nombre: "Teclados",
@@ -75,7 +75,7 @@ const productos = [
     },
     {
         id: "teclado-04",
-        titulo: "Teclado Redragon K552 Kumara 2 Mecanico Es Blanco Iluminación Rainbow",
+        titulo: "Teclado Redragon K552 Kumara 2 Mecanico Es Blanco rainbow",
         imagen: "./img/teclado04.jpg",
         categoria: {
             nombre: "Teclados",
@@ -168,7 +168,7 @@ const productos = [
     // MICROFONOS
     {
         id: "microfono-01",
-        titulo: "Microfono Gamer Xtrike-me Cable Omnidireccional Pc Juegos Color Negro",
+        titulo: "Microfono Gamer Xtrike-me Cable Omnidireccional Pc",
         imagen: "./img/microfono01.jpg",
         categoria: {
             nombre: "Microfonos",
@@ -178,7 +178,7 @@ const productos = [
     },
     {
         id: "microfono-02",
-        titulo: "Micrófono Hyperx Duocast Rgb Condensador Cardioide Usb Negro",
+        titulo: "Micrófono Hyperx Duocast Rgb Condensador Cardioide",
         imagen: "./img/microfono02.jpg",
         categoria: {
             nombre: "Microfonos",
@@ -188,7 +188,7 @@ const productos = [
     },
     {
         id: "microfono-03",
-        titulo: "Microfono Pc Gamer Streaming Juegos Youtube Noga Mic-st02",
+        titulo: "Microfono Pc Gamer Streaming Juegos Youtube Noga",
         imagen: "./img/microfono03.jpg",
         categoria: {
             nombre: "Microfonos",
@@ -198,7 +198,7 @@ const productos = [
     },
     {
         id: "microfono-04",
-        titulo: "Micrófono SF 666 condensador omnidireccional negro",
+        titulo: "Micrófono SF 666 condensador omnidireccional",
         imagen: "./img/microfono04.jpg",
         categoria: {
             nombre: "Microfonos",
@@ -209,7 +209,7 @@ const productos = [
     // JOYSTICKS
     {
         id: "joystick-01",
-        titulo: "Joystick Inalámbrico Etheos Ps3 Ps4 Pc Ios Android Bluetooth",
+        titulo: "Joystick Inalámbrico Etheos Ps3 Ps4 Pc Ios Bluetooth",
         imagen: "./img/joystick01.jpg",
         categoria: {
             nombre: "Joystick",
@@ -253,6 +253,7 @@ const contenedorProductos = document.querySelector("#contenedor-productos");
 const botonesCategorias = document.querySelectorAll(".boton-categoria");
 const tituloPrincipal = document.querySelector("#titulo-principal");
 let botonesAgregar = document.querySelectorAll(".producto-agregar");
+const numerito = document.querySelector("#numerito");
 
 function cargarProductos(productosElegidos) {
 
@@ -262,17 +263,17 @@ function cargarProductos(productosElegidos) {
         const div = document.createElement("div");
         div.classList.add("producto");
         div.innerHTML = `
-        <img src="${producto.imagen}" alt="${producto.titulo}" class="producto-imagen">
-        <div class="producto-detalles">
-            <h3 class="producto-titulo">${producto.titulo}</h3>
-            <p class="producto-precio"> $${producto.precio}</p>
-            <button class="producto-agregar" id="${producto.id}">Agregar</button>
-        </div>
+            <img class="producto-imagen" src="${producto.imagen}" alt="${producto.titulo}">
+            <div class="producto-detalles">
+                <h3 class="producto-titulo">${producto.titulo}</h3>
+                <p class="producto-precio">$${producto.precio}</p>
+                <button class="producto-agregar" id="${producto.id}">Agregar</button>
+            </div>
         `;
 
         contenedorProductos.append(div);
-
     })
+    actualizarBotonesAgregar();
 }
 
 cargarProductos(productos);
@@ -300,6 +301,43 @@ botonesCategorias.forEach(boton => {
 
 function actualizarBotonesAgregar() {
     botonesAgregar = document.querySelectorAll(".producto-agregar");
+
+    botonesAgregar.forEach(boton => {
+        boton.addEventListener("click", agregarAlCarrito);
+    });
 }
 
-// 1:26
+let productosEnCarrito;
+
+let productosEnCarritoLS = localStorage.getItem("productos-en-carrito");
+
+if (productosEnCarritoLS) {
+    productosEnCarrito = JSON.parse(productosEnCarritoLS);
+    actualizarNumerito();
+} else {
+    productosEnCarrito = [];
+}
+
+function agregarAlCarrito(e) {
+    const idBoton = e.currentTarget.id;
+    const productoAgregado = productos.find(producto => producto.id === idBoton);
+
+    if(productosEnCarrito.some(producto => producto.id === idBoton)) {
+        const index = productosEnCarrito.findIndex(producto => producto.id === idBoton);
+        productosEnCarrito[index].cantidad++; 
+    }
+    else {
+        productoAgregado.cantidad = 1;
+        productosEnCarrito.push(productoAgregado);
+    }
+    actualizarNumerito();
+
+    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+}
+
+function actualizarNumerito() {
+    let nuevoNumerito = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
+    numerito.innerText = nuevoNumerito;
+}
+
+// 1.41
