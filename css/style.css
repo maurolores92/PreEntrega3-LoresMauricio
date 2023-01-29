@@ -526,6 +526,12 @@ main {
         opacity: 1;
         visibility: visible;
 }
+    .close-nav {
+        background-color: var(--clr-main);
+        color: var(--clr-white);
+        border: 0;
+        font-size: 2rem;
+    }
 nav {
     position: fixed;
     z-index: 9;
@@ -554,6 +560,7 @@ nav {
     display: none;
 }
 .boton-nav {
+    background-color: var(--clr-main);
     color: var(--clr-white);
 }
 .carrito-producto {
