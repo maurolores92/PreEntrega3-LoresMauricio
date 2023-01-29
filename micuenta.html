@@ -9,21 +9,31 @@
     <title>Gamming Store</title>
 </head>
 <body>
-    <nav>
-        <h1 class="logo">Gamming Store</h1>
-        <div>
-            <ul class="nav-menu">
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="">Contactanos</a></li>
-                <li><a href="./micuenta.html">Mi cuenta</a></li>
-            </ul>
-        </div>
-        <div class="nav-menu">
-            <a href="https://www.instagram.com/maurolores92/"><i class="bi bi-instagram"></a></i>
-            <a href="https://www.linkedin.com/in/mauriciolores/"><i class="bi bi-linkedin"></a></i>
-            <a href="https://github.com/maurolores92"><i class="bi bi-github"></a></i>
-        </div>
-    </nav>
+    <div class="nav-mobile">
+        <h2 class="logo">Gamming Store</h2>
+        <button class="open-nav" id="open-nav"><i class="bi bi-list"></i></button>
+</div>
+<nav>
+    <button class="close-nav" id="close-nav"><i class="bi bi-x"></i></button>
+    <h1 class="logo">Gamming Store</h1>
+    <div class="nav-menu">
+        <ul class="nav-menu">
+            <li><a href="./index.html" class="boton-nav boton-categoria">Home</a></li>
+            <li><a href="" class="boton-nav boton-categoria">Contactanos</a></li>
+            <li><a href="./micuenta.html" class="boton-nav boton-categoria">Mi cuenta</a></li>
+        </ul>
+    </div>
+    <div class="nav-menu-buscar">
+        <input type="text" id="buscar" class="buscar " placeholder="Buscar">  
+        <button class="boton-buscar">Buscar</button>
+    </div>
+    <div class="nav-menu-iconos">
+        <a href="https://www.instagram.com/maurolores92/" class="boton-nav boton-categoria"><i class="bi bi-instagram"></a></i>
+        <a href="https://www.linkedin.com/in/mauriciolores/" class="boton-nav boton-categoria"><i class="bi bi-linkedin"></a></i>
+        <a href="https://github.com/maurolores92" class="boton-nav boton-categoria"><i class="bi bi-github"></a></i>
+    </div>
+    
+</nav>
     <div class="wrapper">
         <aside>
             <header>
@@ -63,6 +73,6 @@
     <footer>
         
     </footer>
-<script src=""></script>
+<script src="./js/menu.js"></script>
 </body>
 </html>
