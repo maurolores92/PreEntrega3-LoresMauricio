@@ -663,8 +663,15 @@ nav {
     .producto-titulo {
         font-size: .8rem;
     }
+
+    .producto-imagen {
+        height: 7rem;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
     .producto-detalles {
         padding: .3rem;
+        margin-top: -.2rem;
     }
     .iniciar-sesion {
         width: 90%;
