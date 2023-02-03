@@ -263,6 +263,7 @@ let slideIndex = 0;
 
 // FUNCIONES
 
+// funcion para crear los productos
 function cargarProductos(productosElegidos) {
     contenedorProductos.innerHTML = "";
     productosElegidos.forEach(producto => {
@@ -273,14 +274,20 @@ function cargarProductos(productosElegidos) {
             <div class="producto-detalles"> 
                 <h3 class="producto-titulo">${producto.titulo}</h3>
                 <p class="producto-precio">$${producto.precio}</p>
-                <button class="producto-agregar" id="${producto.id}">Agregar</button>
+                <button class="button producto-agregar" id="${producto.id}">
+                <span class="button_lg">
+                    <span class="button_sl"></span>
+                    <span class="button_text">Agregar</span>
+                </span>
+                </button>
             </div>
+            
         `;
         contenedorProductos.append(div);
     })
     actualizarBotonesAgregar();
 }
-
+// funcion para agregar productos con el boton AGREGAR
 function actualizarBotonesAgregar() {
     botonesAgregar = document.querySelectorAll(".producto-agregar");
     botonesAgregar.forEach(boton => {
@@ -288,6 +295,7 @@ function actualizarBotonesAgregar() {
     });
 }
 
+// Funcion para que los productos se agreguen al carrito
 function agregarAlCarrito(e) {
     const idBoton = e.currentTarget.id;
     const productoAgregado = productos.find(producto => producto.id === idBoton);
@@ -303,11 +311,13 @@ function agregarAlCarrito(e) {
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
 }
 
+// funcion para actualizar el numero del carrito
 function actualizarNumerito() {
     let nuevoNumerito = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
     numerito.innerText = nuevoNumerito;
 }
 
+// funcion para el slider
 function showSlides() {
     let i;
     let slides = document.getElementsByClassName("mySlides");
@@ -349,4 +359,3 @@ if (productosEnCarritoLS) {
 }
 
 showSlides();
-
