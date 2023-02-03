@@ -5,7 +5,7 @@ const productos = [
     {
         id: "monitor-01",
         titulo: "Monitor Gamer 23,6 Redragon Gm3cc236 Ruby Fhd 165hz",
-        imagen: "./img/monitor01.jpg",
+        imagen: "./img/monitor01.webp",
         categoria: {
             nombre: "Monitores",
             id: "monitores"
@@ -15,7 +15,7 @@ const productos = [
     {
         id: "monitor-02",
         titulo: "Monitor Gamer 24 Level Up Full Hd 144hz 1ms 24-up5500",
-        imagen: "./img/monitor02.jpg",
+        imagen: "./img/monitor02.webp",
         categoria: {
             nombre: "Monitores",
             id: "monitores"
@@ -25,7 +25,7 @@ const productos = [
     {
         id: "monitor-03",
         titulo: "Monitor gamer curvo Samsung C24RG5 LCD 23.5 negro",
-        imagen: "./img/monitor03.jpg",
+        imagen: "./img/monitor03.webp",
         categoria: {
             nombre: "Monitores",
             id: "monitores"
@@ -35,7 +35,7 @@ const productos = [
     {
         id: "monitor-04",
         titulo: "Monitor Gamer Aopen Led 25'' Full Hd 144hz",
-        imagen: "./img/monitor04.jpg",
+        imagen: "./img/monitor04.webp",
         categoria: {
             nombre: "Monitores",
             id: "monitores"
@@ -46,7 +46,7 @@ const productos = [
     {
         id: "teclado-01",
         titulo: "Teclado gamer Nisuta NSKBGZ61 QWERTY Outemu Brown",
-        imagen: "./img/teclado01.jpg",
+        imagen: "./img/teclado01.webp",
         categoria: {
             nombre: "Teclados",
             id: "teclados"
@@ -56,7 +56,7 @@ const productos = [
     {
         id: "teclado-02",
         titulo: "Teclado gamer Redragon Dark Avenger K568RGB QWERTY Red",
-        imagen: "./img/teclado02.jpg",
+        imagen: "./img/teclado02.webp",
         categoria: {
             nombre: "Teclados",
             id: "teclados"
@@ -66,7 +66,7 @@ const productos = [
     {
         id: "teclado-03",
         titulo: "Teclado gamer HyperX Alloy Origins Core QWERTY Red inglés",
-        imagen: "./img/teclado03.jpg",
+        imagen: "./img/teclado03.webp",
         categoria: {
             nombre: "Teclados",
             id: "teclados"
@@ -76,7 +76,7 @@ const productos = [
     {
         id: "teclado-04",
         titulo: "Teclado Redragon K552 Kumara 2 Mecanico Es Blanco rainbow",
-        imagen: "./img/teclado04.jpg",
+        imagen: "./img/teclado04.webp",
         categoria: {
             nombre: "Teclados",
             id: "teclados"
@@ -87,7 +87,7 @@ const productos = [
     {
         id: "mouse-01",
         titulo: "Mouse de juego Logitech G Series Lightsync G203 negro",
-        imagen: "./img/mouse01.jpg",
+        imagen: "./img/mouse01.webp",
         categoria: {
             nombre: "Mouse",
             id: "mouse"
@@ -97,7 +97,7 @@ const productos = [
     {
         id: "mouse-02",
         titulo: "Mouse de juego Razer DeathAdder V2 Mini negro",
-        imagen: "./img/mouse02.jpg",
+        imagen: "./img/mouse02.webp",
         categoria: {
             nombre: "Mouse",
             id: "mouse"
@@ -107,7 +107,7 @@ const productos = [
     {
         id: "mouse-03",
         titulo: "Mouse de juego Redragon Cobra M711-FPS negro",
-        imagen: "./img/mouse03.jpg",
+        imagen: "./img/mouse03.webp",
         categoria: {
             nombre: "Mouse",
             id: "mouse"
@@ -117,7 +117,7 @@ const productos = [
     {
         id: "mouse-04",
         titulo: "Mouse de juego Redragon Impact M908 negro",
-        imagen: "./img/mouse04.jpg",
+        imagen: "./img/mouse04.webp",
         categoria: {
             nombre: "Mouse",
             id: "mouse"
@@ -128,7 +128,7 @@ const productos = [
     {
         id: "auriculares-01",
         titulo: "Auriculares gamer Kotion G2000 negro y azul con luz LED",
-        imagen: "./img/auriculares01.jpg",
+        imagen: "./img/auriculares01.webp",
         categoria: {
             nombre: "Auriculares",
             id: "auriculares"
@@ -138,7 +138,7 @@ const productos = [
     {
         id: "auriculares-02",
         titulo: "Auriculares gamer Logitech G Series G335 negros",
-        imagen: "./img/auriculares02.jpg",
+        imagen: "./img/auriculares02.webp",
         categoria: {
             nombre: "Auriculares",
             id: "auriculares"
@@ -148,7 +148,7 @@ const productos = [
     {
         id: "auriculares-03",
         titulo: "Auriculares gamer Onikuma K20 negro con luz rgb LED",
-        imagen: "./img/auriculares03.jpg",
+        imagen: "./img/auriculares03.webp",
         categoria: {
             nombre: "Auriculares",
             id: "auriculares"
@@ -158,7 +158,7 @@ const productos = [
     {
         id: "auriculares-04",
         titulo: "Auriculares Gamer Hyperx Cloud Stinger Core Negro",
-        imagen: "./img/auriculares04.jpg",
+        imagen: "./img/auriculares04.webp",
         categoria: {
             nombre: "Auriculares",
             id: "auriculares"
@@ -169,7 +169,7 @@ const productos = [
     {
         id: "microfono-01",
         titulo: "Microfono Gamer Xtrike-me Cable Omnidireccional Pc",
-        imagen: "./img/microfono01.jpg",
+        imagen: "./img/microfono01.webp",
         categoria: {
             nombre: "Microfonos",
             id: "microfonos"
@@ -179,7 +179,7 @@ const productos = [
     {
         id: "microfono-02",
         titulo: "Micrófono Hyperx Duocast Rgb Condensador Cardioide",
-        imagen: "./img/microfono02.jpg",
+        imagen: "./img/microfono02.webp",
         categoria: {
             nombre: "Microfonos",
             id: "microfonos"
@@ -189,7 +189,7 @@ const productos = [
     {
         id: "microfono-03",
         titulo: "Microfono Pc Gamer Streaming Juegos Youtube Noga",
-        imagen: "./img/microfono03.jpg",
+        imagen: "./img/microfono03.webp",
         categoria: {
             nombre: "Microfonos",
             id: "microfonos"
@@ -199,7 +199,7 @@ const productos = [
     {
         id: "microfono-04",
         titulo: "Micrófono SF 666 condensador omnidireccional",
-        imagen: "./img/microfono04.jpg",
+        imagen: "./img/microfono04.webp",
         categoria: {
             nombre: "Microfonos",
             id: "microfonos"
@@ -210,7 +210,7 @@ const productos = [
     {
         id: "joystick-01",
         titulo: "Joystick Inalámbrico Etheos Ps3 Ps4 Pc Ios Bluetooth",
-        imagen: "./img/joystick01.jpg",
+        imagen: "./img/joystick01.webp",
         categoria: {
             nombre: "Joystick",
             id: "joystick"
@@ -220,7 +220,7 @@ const productos = [
     {
         id: "joystick-02",
         titulo: "Joystick Level Up Cobra X negro y rojo",
-        imagen: "./img/joystick02.jpg",
+        imagen: "./img/joystick02.webp",
         categoria: {
             nombre: "Joystick",
             id: "joystick"
@@ -230,7 +230,7 @@ const productos = [
     {
         id: "joystick-03",
         titulo: "Joystick Ps3 Inalambrico Bluetooth Seisa",
-        imagen: "./img/joystick03.jpg",
+        imagen: "./img/joystick03.webp",
         categoria: {
             nombre: "Joystick",
             id: "joystick"
@@ -240,7 +240,7 @@ const productos = [
     {
         id: "joystick-04",
         titulo: "Joystick T-Dagger T-TGP500 negro",
-        imagen: "./img/joystick04.jpg",
+        imagen: "./img/joystick04.webp",
         categoria: {
             nombre: "Joystick",
             id: "joystick"
